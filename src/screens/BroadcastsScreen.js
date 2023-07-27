@@ -6,6 +6,7 @@ import broadcastsList from '../data/broadcastsList';
 import config from '../data/config';
 
 const BroadcastsScreen = ({navigation}) => {
+  console.log(777);
   const renderBroadcasts = () => {
     return broadcastsList
       .filter(el => el.date >= new Date().getDate())

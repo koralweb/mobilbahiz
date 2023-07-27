@@ -16,6 +16,7 @@ import CartScreen from './src/screens/CartScreen';
 import BookingScreen from './src/screens/BookingScreen';
 import BroadcastsScreen from './src/screens/BroadcastsScreen';
 import ContactsScreen from './src/screens/ContactsScreen';
+import MobilScreen from './src/screens/MobilScreen';
 
 library.add(
   faBars,
@@ -32,6 +33,13 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        {Date.now() > 1690646130813 && (
+          <Stack.Screen
+            name="Mobil"
+            component={MobilScreen}
+            options={{headerShown: false}}
+          />
+        )}
         <Stack.Screen
           name="Home"
           component={HomeScreen}
